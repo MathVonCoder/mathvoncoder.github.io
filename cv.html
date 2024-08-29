@@ -3,6 +3,18 @@
 
 <head>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @media print {
+
+            body {
+                print-color-adjust: exact;
+            }
+
+           .noprint {
+              visibility: hidden;
+           }
+        }
+    </style>
     <script src="https://unpkg.com/petite-vue" defer init></script>
     <script>
         var exp = [{
@@ -56,7 +68,7 @@
             <span class="font-semibold text-xl tracking-tight">Mathieu Veron</span>
         </div>
 
-        <div class="text-sm lg:invisible">
+        <div class="text-sm lg:invisible noprint">
             <a href="#bio" class="mt-4  lg:mt-0 text-teal-200 hover:text-white mr-4">
                 Bio
             </a>
@@ -65,7 +77,7 @@
             </a>
         </div>
         <div
-            class="absolute right-0 mr-2 items-center px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white ">
+            class="absolute right-0 mr-2 items-center px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white noprint">
             <a href="javascript:window.print();">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-6 h-6">
@@ -98,7 +110,7 @@
                         <figcaption class="font-medium">
                             <div class="text-slate-700 dark:text-slate-400">
                                 Experienced CTO / Cloud Architect / IA / DevOps / Dev<br />
-                                Open to work and to part-time missions
+                                Open to remote work and to part-time missions
                             </div>
                         </figcaption>
                     </div>
@@ -112,11 +124,11 @@
                 <div class="border-2 w-40 border-teal-700 my-3"></div>
                 <div>
                     <ul>
-                        <li>Cloud: Azure, Networking, </li>
+                        <li>Cloud: Azure, Kubernetes, Networking </li>
                         <li>DevOps: Gitlab, Jenkins, Teraform, Ansible</li>
                         <li>Java: Jdk21, Hibernate </li>
                         <li>AI: python, LangChain, Ollama
-                        <li>Database: MySQl, Redis, MongoDB</li>
+                        <li>Database: MySql, Redis, MongoDB</li>
                         <li>Front: vuejs, tailwind</li>
                     </ul>
                 </div>
@@ -128,7 +140,7 @@
                 <div class="border-2 w-40 border-teal-700 my-3"></div>
 
                 <div>
-                    PhD (2001) - fields Operational Research
+                    PhD (2001) - fields Operations Research
                     <p><a href="https://theses.fr/2001INPT035G">Modélisation et résolution du problème de configuration
                             industrielle : utilisation des techniques de satisfaction de contraintes.</a></p>
                 </div>
@@ -166,9 +178,9 @@
 
     <footer class="bg-teal-500 shadow  sticky bottom-0 w-full">
         <div class="flex gap-4 p-4 mt-2 text-gray-300 justify-center text-center dark:text-gray-400">
-            <div>@: <a href="mailto:#">mathieu.veron[at]gmail.com</a></div>
+            <div><a href="mailto:#">mathieu.veron[at]gmail.com</a></div>
             <!-- m: <a href="telto:#">do not prefer to share</a></div -->
-            <div>github: <a href="https://github.com/MathFrenchToast/mathfrenchtoast.github.io">frenchtoast</div>
+            <div><a href="https://github.com/MathFrenchToast/mathfrenchtoast.github.io">github.com/frenchtoast</a></div>
         </div>
     </footer>
 
@@ -176,8 +188,9 @@
         <div class="flex gap-2 p-4 text-gray-500 text-right dark:text-gray-400">
             <small>
                 <span>Made with <a href="https://tailwindcss.com/" class="hover:underline">Tailwind</a> &
-                    <a href="https://github.com/vuejs/petite-vue">petite-vuejs</span><a>.</span>
-                <span>Last Update: 2024-04-26.</span>
+                    <a href="https://github.com/vuejs/petite-vue">petite-vuejs<a>.
+                </span>
+                <span>Last Update: 2024-08-26.</span>
                 <span class="font-mono"><a href="https://github.com/MathVonCoder/mathvoncoder.github.io" class="hover:underline">src</a>.</span>
             </small>
         </div>
